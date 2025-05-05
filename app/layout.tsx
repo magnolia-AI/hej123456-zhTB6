@@ -5,11 +5,12 @@ import { Button } from '@/components/ui/button'
 import { ThemeProvider } from '@/components/theme-provider'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { MobileNav } from '@/components/mobile-nav'
+import { SocialLinks } from '@/components/social-links'
 
 
 export const metadata: Metadata = {
-  title: 'Next.js Template',
-  description: 'A customizable template built with Next.js and Tailwind CSS',
+  title: 'BMX TikTok | Extreme Tricks & Skills',
+  description: 'Follow my BMX journey with epic tricks, stunts, and behind-the-scenes content on TikTok',
   icons: {
     icon: '/favicon.ico',
   },
@@ -39,16 +40,17 @@ export default function RootLayout({
                   Remember to update the mobile navigation in the mobile-nav.tsx file
                 */}
                 {/* <MobileNav /> */}
-                <div className="font-semibold">Template Logo</div>
+                <div className="font-bold text-xl tracking-tight">BMX<span className="text-red-500">TikTok</span></div>
               </div>
               {/* <nav className="hidden md:flex gap-6">
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 1</a>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 2</a>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 3</a>
               </nav> */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4">
+                <SocialLinks />
                 <ThemeToggle />
-                <Button variant="outline" size="sm">Template Button</Button>
+                <Button variant="outline" size="sm" className="bg-red-500 text-white hover:bg-red-600 border-none">Follow Me</Button>
               </div>
             </div>
           </header>
@@ -111,7 +113,7 @@ export default function RootLayout({
 
               <div className="mt-8 pt-4 text-center">
                 <p className="text-sm text-muted-foreground">
-                  © 2024 Template Brand. All rights reserved.
+                  © 2024 BMXTikTok. Follow me for the most extreme BMX content.
                 </p>
               </div>
             </div>
@@ -122,3 +124,8 @@ export default function RootLayout({
     </html>
   )
 }
+
+
+
+
+
